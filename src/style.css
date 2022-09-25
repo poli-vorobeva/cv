@@ -1,0 +1,138 @@
+:root {
+    --main-text-color: rgb(0, 14, 50);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Albert Sans', sans-serif;
+    color:var(--main-text-color)
+}
+.cvTitleSection{
+    margin: 20px 0;
+}
+.cvTitleSection div{
+    font-size: 1.5rem;
+}
+.cvTitleSection h1{
+    font-size: 0.75rem;
+}
+svg {
+    position: absolute;
+}
+
+.content {
+    width: 100vw;
+    min-height: 100vh;
+    /*background-color: green;*/
+    display: flex;
+}
+
+.contentWrapper {
+    position: absolute;
+    width: 100vw;
+    /* background-color: olive;*/
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.largeSection {
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+}
+
+.smallSection {
+    width: 30%;
+    height: 100%;
+    /* background-color: orange;*/
+    display: flex;
+    flex-flow: column;
+
+    justify-content: space-evenly;
+}
+
+.photo {
+    width: 150px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 15px 3px;
+    box-shadow: 0 0 25px 1px #283d4c;
+    margin: 20px 0;
+}
+
+.cvTitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    color:var(--main-text-color)
+}
+
+.cvTitle::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-text-color);
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    filter: url('#goo');
+    mix-blend-mode: color-dodge;
+    opacity: 0.1;
+}
+
+.sitesList {
+    font-size: 20px;
+    color: rgb(168 190 208);
+    mix-blend-mode: luminosity;
+}
+
+.projectsSection {
+    background-color: green;
+}
+
+.sectionTitle {
+    font-size: 30px;
+    color: var(--main-text-color)
+}
+
+.aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+}
+
+.name {
+    color: white;
+    position: absolute;
+    bottom: 32%;
+    width: 200px;
+    left: -80%;
+    transform: rotate(-90deg);
+    letter-spacing: 3px;
+}
+
+.name::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    background: white;
+    transition: all 500ms ease;
+}
+
+.name:hover::after {
+    width: 80%;
+}
