@@ -100,3 +100,6 @@
 .inlineStyle{
     display: inline;
 }
+img:hover{
+   cursor: pointer;
+}

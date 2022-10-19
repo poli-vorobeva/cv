@@ -21,9 +21,9 @@ export class TextSection extends Control {
 		new Control(this.node, 'h3',
 			sectionStyles.sectionTitle, title)
 		if (isSplit) {
-content.split('.').forEach(el=>{
-	new Control(this.node,'p',sectionStyles.sectionP,el)
-})
+			content.split('.').forEach(el => {
+				new Control(this.node, 'p', sectionStyles.sectionP, el)
+			})
 		} else {
 			new Control(this.node, 'p', sectionStyles.sectionP, content)
 		}
@@ -67,9 +67,18 @@ export class Section extends Control {
 }
 
 export class ProjectsSection extends Control {
-	constructor(parentNode: HTMLElement, data: { title: string; arrayOfData: projectData[] }) {
+	private sitesLinks: Record<string, string>;
+	private projects: IProjects [];
+
+	constructor(parentNode: HTMLElement,
+							data: {
+								linksData: Record<string, string>;
+								title: string;
+								arrayOfData: projectData[]
+							}
+	) {
 		super(parentNode, 'div', sectionStyles.sectionSt);
-		const projects: IProjects [] = [
+		this.projects = [
 			{
 				description: `Участвую в комадной разработке игры Red Alert, занималась трассировкой,
 		перемещением юнитов по полю. Также принимала участие в оптимизации, разработке клиет-серверного взаимодействия`,
@@ -77,35 +86,45 @@ export class ProjectsSection extends Control {
 			},
 			{
 				description: `Освоила работу  web socket`,
-				sites: [sites.redAlert, sites.artQuiz, sites.fool]
+				sites: ['redAlert', 'artQuiz', 'fool']
 			},
 			{
 				description: `Разобралась с реализацией бота`,
-				sites: [sites.redAlert, sites.fool]
+				sites: ["redAlert", "fool"]
 			},
 			{
 				description: 'Работала с базой данных mongoDB',
-				sites: [sites.englishFK, sites.question]
+				sites: ["englishFK", "question"]
 			},
-			{description: 'Писала на React', sites: [sites.question, sites.zoo, sites.plannerOld]},
+			{description: 'Писала на React', sites: ["question", "zoo", "plannerOld"]},
 			{
-				description: 'Освоила основы TypeScript', sites: [sites.artQuiz, sites.redAlert, sites.planner,
-					sites.fool, sites.englishFK, sites.christmas, sites.match]
+				description: 'Освоила основы TypeScript', sites: ['artQuiz', 'redAlert', 'planner',
+					'fool', 'englishFK', 'christmas', 'match']
 			},
-			{description: 'Ознакомилась с работой NextJS', sites: [sites.netflx, sites.nextApp]},
+			{description: 'Ознакомилась с работой NextJS', sites: ['netflx', 'nextApp']},
 			//todo to add netflsx proj vue landings- zoo museum
-			{description: 'Разобралась с основами Vue3', sites: [sites.vueProject, sites.excelVue, sites.vueTodo]},
+			{description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
+				'vueProject', 'excelVue', 'vueTodo','vuexApp']},
 			{
-				description: 'Работала с Canvas', sites: [sites.redAlert, sites.christmas]
+				description: 'Работала с Canvas', sites: ['redAlert', 'christmas']
 				//webGL,christmas,redAlert,momentum
 			},
 			{
 				description: 'Работала с audioApi, запись, сохранение, воспроизведение аудио заметок',
 				sites: ['momentum']
-			}
+			},
+			{
+				description: 'Научилась контактировать с Nodejs',
+				sites: []
+			},
+			{
+				description: 'Оценила удобство git',
+				sites:[]
+			},
 		]
+		this.sitesLinks = data.linksData
 		const title = new Control(this.node, 'h3', sectionStyles.sectionTitle, data.title)
-		projects.forEach(proj => {
+		this.projects.forEach(proj => {
 			this.projectElement(proj)
 		})
 	}
@@ -115,15 +134,21 @@ export class ProjectsSection extends Control {
 		const title = new Control(wrap.node, 'span', '', proj.description)
 		const projectsWrapper = new Control(wrap.node, 'span')
 		proj.sites.forEach((s, i) => {
-			this.projectCell(projectsWrapper.node, s, i, proj.sites.length)
+			this.projectCell(projectsWrapper.node, s, i, proj.sites.length, this.sitesLinks[s])
 		})
 	}
 
-	projectCell(parent: HTMLElement, s: string, i: number, length: number) {
+	projectCell(parent: HTMLElement, s: string, i: number, length: number, linkUrl: string) {
+		console.log(linkUrl, s)
 		const el = new Control(parent, 'span')
-		const e = new Control(el.node, 'span', sectionStyles.sectionSiteContent, this.defineContent(s, i, length))
-		const siteLink = new Control(el.node, 'img')
+		const e = new Control(el.node, 'span', sectionStyles.sectionSiteContent,
+			this.defineContent(s, i, length))
+		const link = new Control(el.node, 'a')
+		link.node.setAttribute('href', linkUrl)
+		link.node.setAttribute('target', 'blank')
+		const siteLink = new Control(link.node, 'img')
 		siteLink.node.setAttribute('src', './public/assets/image/githubIcon.svg')
+
 	}
 
 	defineContent(s: string, i: number, totalLeng: number): string {

@@ -2,7 +2,25 @@ import Control from "../controll";
 import {ProjectsSection, TextSection} from "./Section";
 import styles from './style.css'
 import {projectData} from "./app";
-
+const sitesGitHubLinks={
+	'artQuiz': 'https://github.com/poli-vorobeva/artQuizREF.git',
+	'fool': 'https://github.com/poli-vorobeva/durak.git',
+	'englishFK': 'https://github.com/poli-vorobeva/efkREF.git',
+	'match': 'https://github.com/poli-vorobeva/mgREF.git',
+	'christmas': 'https://github.com/poli-vorobeva/christmas.git',
+	'zoo': 'https://github.com/poli-vorobeva/zooREF.git',
+	'planner': 'https://github.com/poli-vorobeva/moonApp.git',
+	'plannerOld': 'https://github.com/poli-vorobeva/old12weeks.git',
+	'question': 'https://github.com/poli-vorobeva/questionnaire.git',
+	'netflx': 'https://github.com/poli-vorobeva/netflx.git',
+	'momentum': 'https://github.com/poli-vorobeva/momentum.git',
+	'excelVue': 'https://github.com/poli-vorobeva/vueExel.git',
+	"vueProject": 'https://github.com/poli-vorobeva/vueStepper.git',
+	"nextApp": "https://github.com/poli-vorobeva/reactNextApp.git",
+	'vueTodo': 'https://github.com/poli-vorobeva/vueProj.git',
+	'englishServer':'https://github.com/poli-vorobeva/copyserver.git',
+	'vuexApp':'https://github.com/poli-vorobeva/vuexApp.git'
+}
 export const sites = {
 	'redAlert': 'Red Alert',
 	'artQuiz': 'Art Quiz',
@@ -19,7 +37,8 @@ export const sites = {
 	'excelVue': "Vue Excel",
 	"vueProject": 'Vue Project',
 	"nextApp": "Next App",
-	'vueTodo': 'Vue todo'
+	'vueTodo': 'Vue todo',
+	'vuexApp':'Vuex App'
 }
 
 export class RightSection extends Control {
@@ -52,7 +71,7 @@ export class RightSection extends Control {
 				stack: ['JS', 'TypeScript', 'Node.js(server)', 'webSockets', 'webPack', 'MongoDB', 'express']
 			},
 			{
-				site: sites.match,
+				site :sites.match,
 				link: '',
 				gitLink: 'https://github.com/poli-vorobeva/mgREF',
 				descr: 'It\'s regular Match game',
@@ -109,7 +128,7 @@ export class RightSection extends Control {
 		const title=new Control(titleSection.node,'div',styles.cvTitle,'Frontend Javascript developer')
 		const name = new Control(titleSection.node, 'h1', '', 'Polina Vorobeva')
 		const projects = new ProjectsSection(this.node, {
-			title: 'Проекты', arrayOfData: this.projectsSection
+			title: 'Проекты', arrayOfData: this.projectsSection,linksData: sitesGitHubLinks
 		});
 		const aboutSection = new TextSection(this.node, 'about me', this.aboutMeContent, true)
 	}

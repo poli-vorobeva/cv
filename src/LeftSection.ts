@@ -14,7 +14,7 @@ export class LeftSection extends Control{
 			При случае могу поиграть в футбол и покер.`
 		const photoEl = new Control(this.node, 'div', styles.photo)
 		photoEl.node.style.backgroundImage = ('url("./public/assets/image/avatar.png")')
-		const contacts=new Section(this.node,{title:'Contacts',data:[]})
+		const contacts=new Section(this.node,{title:'Contacts',arrayOfData:[]})
 		//gmail  telegram  github tel
 		const skills = new Section(this.node, {
 			title: 'Skills',
