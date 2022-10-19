@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb5b86b-23d6-4296-9df5-9124a615ee15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeftSection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSection.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RightSection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightSection.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Section.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sectionStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sectionStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +41,22 @@
       <recent name="C:\Users\poli8\Desktop\myCVSite\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build:prod">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:prod" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -71,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build:prod" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
@@ -108,7 +112,7 @@
       <workItem from="1664351376146" duration="22000" />
       <workItem from="1664523702651" duration="9071000" />
       <workItem from="1664888624591" duration="8000" />
-      <workItem from="1666167620907" duration="1234000" />
+      <workItem from="1666167620907" duration="1965000" />
     </task>
     <servers />
   </component>
@@ -120,22 +124,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="305" y="104" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1663405051676" />
-    <state width="1507" height="107" key="GridCell.Tab.0.bottom" timestamp="1664823700728">
+    <state width="1507" height="107" key="GridCell.Tab.0.bottom" timestamp="1666169605046">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664823700728" />
-    <state width="1507" height="107" key="GridCell.Tab.0.center" timestamp="1664823700728">
+    <state width="1507" height="107" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1666169605046" />
+    <state width="1507" height="107" key="GridCell.Tab.0.center" timestamp="1666169605046">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664823700728" />
-    <state width="1507" height="107" key="GridCell.Tab.0.left" timestamp="1664823700728">
+    <state width="1507" height="107" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1666169605046" />
+    <state width="1507" height="107" key="GridCell.Tab.0.left" timestamp="1666169605046">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664823700728" />
-    <state width="1507" height="107" key="GridCell.Tab.0.right" timestamp="1664823700728">
+    <state width="1507" height="107" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1666169605046" />
+    <state width="1507" height="107" key="GridCell.Tab.0.right" timestamp="1666169605046">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664823700728" />
+    <state width="1507" height="107" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1666169605046" />
     <state x="177" y="68" width="714" height="748" key="find.popup" timestamp="1664819357040">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
