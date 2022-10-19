@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb5b86b-23d6-4296-9df5-9124a615ee15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
       <recent name="C:\Users\poli8\Desktop\myCVSite\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.build:prod">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -74,8 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.build:prod" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -112,7 +111,7 @@
       <workItem from="1664351376146" duration="22000" />
       <workItem from="1664523702651" duration="9071000" />
       <workItem from="1664888624591" duration="8000" />
-      <workItem from="1666167620907" duration="2593000" />
+      <workItem from="1666167620907" duration="3261000" />
     </task>
     <servers />
   </component>
@@ -124,22 +123,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="305" y="104" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1663405051676" />
-    <state width="1507" height="107" key="GridCell.Tab.0.bottom" timestamp="1666172708599">
+    <state width="1507" height="170" key="GridCell.Tab.0.bottom" timestamp="1666173325510">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1666172708599" />
-    <state width="1507" height="107" key="GridCell.Tab.0.center" timestamp="1666172708598">
+    <state width="1507" height="170" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1666173325510" />
+    <state width="1507" height="170" key="GridCell.Tab.0.center" timestamp="1666173325510">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1666172708598" />
-    <state width="1507" height="107" key="GridCell.Tab.0.left" timestamp="1666172708598">
+    <state width="1507" height="170" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1666173325510" />
+    <state width="1507" height="170" key="GridCell.Tab.0.left" timestamp="1666173325510">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1666172708598" />
-    <state width="1507" height="107" key="GridCell.Tab.0.right" timestamp="1666172708598">
+    <state width="1507" height="170" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1666173325510" />
+    <state width="1507" height="170" key="GridCell.Tab.0.right" timestamp="1666173325510">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1507" height="107" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1666172708598" />
+    <state width="1507" height="170" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1666173325510" />
     <state x="177" y="68" width="714" height="748" key="find.popup" timestamp="1664819357040">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
