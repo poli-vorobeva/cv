@@ -38,10 +38,6 @@ export class Section extends Control {
 		const skillsUl = new Control(this.node, 'ul', data.styles !== 'education'
 			? sectionStyles.sectionUl
 			: sectionStyles.sectionEducationUl)
-		//if(data.styles){
-		// data.styles=='skills' && (skillsUl.node.setAttribute('class'
-		// 	,sectionStyles.skillsUl))
-		//}
 		if (data.styles === 'skills' || data.styles === 'techs') {
 			skillsUl.node.style.display = 'flex'
 			skillsUl.node.style.flexFlow = 'wrap'
@@ -103,8 +99,10 @@ export class ProjectsSection extends Control {
 			},
 			{description: 'Ознакомилась с работой NextJS', sites: ['netflx', 'nextApp']},
 			//todo to add netflsx proj vue landings- zoo museum
-			{description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
-				'vueProject', 'excelVue', 'vueTodo','vuexApp']},
+			{
+				description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
+					'vueProject', 'excelVue', 'vueTodo', 'vuexApp']
+			},
 			{
 				description: 'Работала с Canvas', sites: ['redAlert', 'christmas']
 				//webGL,christmas,redAlert,momentum
@@ -119,7 +117,7 @@ export class ProjectsSection extends Control {
 			},
 			{
 				description: 'Оценила удобство git',
-				sites:[]
+				sites: []
 			},
 		]
 		this.sitesLinks = data.linksData
@@ -159,5 +157,34 @@ export class ProjectsSection extends Control {
 				: i === totalLeng - 1
 					? `, ${s} `
 					: `, ${s}`
+	}
+}
+
+export class ContactsSection extends Control {
+	constructor(parent: HTMLElement) {
+		super(parent);
+		const titleT = 'Контакты'
+		const data = {
+			'github': 'poli-vorobeva',
+			'phone': '+7 978 059 51 60',
+			'telegram': '+79111283475',
+			'whatsapp': '+79111283475',
+			'email': 'poli8512@gmail.com'
+		}
+		const title = new Control(this.node, 'h3', sectionStyles.sectionTitle, titleT)
+		const ul = new Control(this.node, 'ul', sectionStyles.sectionUl)
+		Object.entries(data).forEach(contact => {
+			const li = new Control(ul.node, 'li',sectionStyles.sectionSiteContent)
+			const img = new Control(li.node, 'img')
+			img.node.style.height='15px'
+			img.node.style.marginRight='5px'
+			img.node.setAttribute('src',`./public/assets/image/socialIcons/${contact[0]}.png`)
+			if(contact[0]!=='github') new Control(li.node, 'span','', contact[1])
+			else{
+				const a=new Control(li.node, 'a')
+				a.node.setAttribute('href','https://github.com/poli-vorobeva')
+				new Control(a.node, 'span','', contact[1])
+			}
+		})
 	}
 }

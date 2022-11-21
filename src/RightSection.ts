@@ -19,7 +19,8 @@ const sitesGitHubLinks={
 	"nextApp": "https://github.com/poli-vorobeva/reactNextApp.git",
 	'vueTodo': 'https://github.com/poli-vorobeva/vueProj.git',
 	'englishServer':'https://github.com/poli-vorobeva/copyserver.git',
-	'vuexApp':'https://github.com/poli-vorobeva/vuexApp.git'
+	'vuexApp':'https://github.com/poli-vorobeva/vuexApp.git',
+	'redAlert':'https://github.com/poli-vorobeva/redAlertFirst.git'
 }
 export const sites = {
 	'redAlert': 'Red Alert',
@@ -126,10 +127,10 @@ export class RightSection extends Control {
 Прошлый опыт на управленческих должностях,помог мне научиться многозадачности и развил много других полезных умений `
 		const titleSection = new Control(this.node, 'div',styles.cvTitleSection )
 		const title=new Control(titleSection.node,'div',styles.cvTitle,'Frontend Javascript developer')
-		const name = new Control(titleSection.node, 'h1', '', 'Polina Vorobeva')
+		const name = new Control(titleSection.node, 'h1', '', 'Полина Воробьева')
 		const projects = new ProjectsSection(this.node, {
 			title: 'Проекты', arrayOfData: this.projectsSection,linksData: sitesGitHubLinks
 		});
-		const aboutSection = new TextSection(this.node, 'about me', this.aboutMeContent, true)
+		const aboutSection = new TextSection(this.node, 'Обо мне', this.aboutMeContent, true)
 	}
 }

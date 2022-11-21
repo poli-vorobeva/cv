@@ -1,5 +1,5 @@
 import Control from "../controll";
-import {Section, TextSection} from "./Section";
+import {ContactsSection, Section, TextSection} from "./Section";
 import styles from './style.css'
 
 export class LeftSection extends Control{
@@ -9,25 +9,25 @@ export class LeftSection extends Control{
 			"Rolling Scope School- JavaScript(2021)",
 			'Psychologist(2018)-Bachelor\'s degree']
 		const technologies = ['MongoDB', 'Express', 'Git', 'RESTApi', 'Webpack']
-		const skillsAr = ['JS/TS','React', 'HTML', 'CSS',  'NodeJS', 'Vue']
+		const skillsAr = ['JS/TS','React', 'HTML', 'CSS', 'Vue','NodeJS']
 		const hobbiesData=`Люблю почитать интересные книги, рисование, походы и природу.
 			При случае могу поиграть в футбол и покер.`
 		const photoEl = new Control(this.node, 'div', styles.photo)
 		photoEl.node.style.backgroundImage = ('url("./public/assets/image/avatar.png")')
-		const contacts=new Section(this.node,{title:'Contacts',arrayOfData:[]})
+		const contacts=new ContactsSection(this.node)
 		//gmail  telegram  github tel
 		const skills = new Section(this.node, {
-			title: 'Skills',
+			title: 'Навыки',
 			arrayOfData: skillsAr,
 			styles: 'skills'
 		})
-		const education = new Section(this.node, {title: 'Education', arrayOfData: educationData, styles:'education'})
+		const education = new Section(this.node, {title: 'Образование', arrayOfData: educationData, styles:'education'})
 		const techs = new Section(this.node, {
-			title:'Technologies',
+			title:'Технологии',
 			arrayOfData:technologies,
 			styles:'techs'
 		})
-		const hobbies = new TextSection(this.node, 'Hobbies',hobbiesData)
+		const hobbies = new TextSection(this.node, 'Хобби',hobbiesData)
 
 		const english = new Control(this.node, 'div', '', 'English( A2)')
 
