@@ -92,16 +92,16 @@ export class ProjectsSection extends Control {
 				description: 'Работала с базой данных mongoDB',
 				sites: ["englishFK", "question"]
 			},
-			{description: 'Писала на React', sites: ["question", "zoo", "plannerOld"]},
+			{description: 'Писала на React', sites: ["bujo","todoWithServer","question", "zoo", "plannerOld"]},
 			{
-				description: 'Освоила основы TypeScript', sites: ['artQuiz', 'redAlert', 'planner',
-					'fool', 'englishFK', 'christmas', 'match']
+				description: 'Освоила основы TypeScript', sites: ['artQuiz', "bujo","todoWithServer",
+					'redAlert','fool', 'englishFK', 'christmas', 'match', 'planner']
 			},
 			{description: 'Ознакомилась с работой NextJS', sites: ['netflx', 'nextApp']},
 			//todo to add netflsx proj vue landings- zoo museum
 			{
 				description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
-					'vueProject', 'excelVue', 'vueTodo', 'vuexApp']
+				/*	'vueProject'*/ 'excelVue', 'vueTodo', 'vuexApp']
 			},
 			{
 				description: 'Работала с Canvas', sites: ['redAlert', 'christmas']

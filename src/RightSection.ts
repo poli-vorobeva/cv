@@ -4,6 +4,8 @@ import styles from './style.css'
 import {projectData} from "./app";
 const sitesGitHubLinks={
 	'artQuiz': 'https://github.com/poli-vorobeva/artQuizREF.git',
+	'bujo':'https://github.com/poli-vorobeva/bujo',
+	'todoWithServer':'https://github.com/poli-vorobeva/todoReact',
 	'fool': 'https://github.com/poli-vorobeva/durak.git',
 	'englishFK': 'https://github.com/poli-vorobeva/efkREF.git',
 	'match': 'https://github.com/poli-vorobeva/mgREF.git',
@@ -25,6 +27,8 @@ const sitesGitHubLinks={
 export const sites = {
 	'redAlert': 'Red Alert',
 	'artQuiz': 'Art Quiz',
+	'bujo':'Bullet Journal',
+	'todoWithServer':'React Todo WithServer',
 	'fool': 'Card Game (Fool)',
 	'englishFK': 'English For Kids',
 	'match': 'Match Match Game',
