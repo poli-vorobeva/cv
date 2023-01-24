@@ -15,7 +15,7 @@ export type projectData = {
 }
 
 export class App extends Control {
-	constructor(parentNode: HTMLElement) {
+	constructor(parentNode: HTMLElement,photo:HTMLImageElement) {
 		super(parentNode, 'div', styles.content);
 		const smallest = [
 			{
@@ -36,7 +36,7 @@ export class App extends Control {
 		const bgCanvas = new CanvasBackGround(this.node)
 		//const aside = new Aside(this.node)
 		const contentWrapper = new Control(this.node, 'div', styles.contentWrapper)
-		const leftSection = new LeftSection(contentWrapper.node)
+		const leftSection = new LeftSection(contentWrapper.node,photo)
 		const rightSection = new RightSection(contentWrapper.node)
 	}
 }

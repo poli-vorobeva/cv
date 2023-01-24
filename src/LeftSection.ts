@@ -3,7 +3,7 @@ import {ContactsSection, Section, TextSection} from "./Section";
 import styles from './style.css'
 
 export class LeftSection extends Control{
-	constructor(parentNode:HTMLElement) {
+	constructor(parentNode:HTMLElement,photo:HTMLImageElement) {
 		super(parentNode,'div', styles.smallSection)
 		const educationData = [
 			"Rolling Scope School- JavaScript(2021)",
@@ -13,7 +13,8 @@ export class LeftSection extends Control{
 		const hobbiesData=`Люблю почитать интересные книги, рисование, походы и природу.
 			При случае могу поиграть в футбол и покер.`
 		const photoEl = new Control(this.node, 'div', styles.photo)
-		photoEl.node.style.backgroundImage = ('url("./public/assets/image/avatar.png")')
+		photoEl.node.appendChild(photo)
+		//photoEl.node.style.backgroundImage = ('url("./public/assets/image/avatar.png")')
 		const contacts=new ContactsSection(this.node)
 		//gmail  telegram  github tel
 		const skills = new Section(this.node, {
