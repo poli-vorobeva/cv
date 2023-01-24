@@ -92,7 +92,7 @@ export class ProjectsSection extends Control {
 				description: 'Работала с базой данных mongoDB',
 				sites: ["englishFK", "question"]
 			},
-			{description: 'Писала на React', sites: ["bujo","todoWithServer","question", "zoo", "plannerOld"]},
+			{description: 'Писала на React', sites: ['buttleShip',"bujo","todoWithServer","question", "zoo", "plannerOld"]},
 			{
 				description: 'Освоила основы TypeScript', sites: ['artQuiz', "bujo","todoWithServer",
 					'redAlert','fool', 'englishFK', 'christmas', 'match', 'planner']
