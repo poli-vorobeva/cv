@@ -8,7 +8,7 @@ export class LeftSection extends Control{
 		const educationData = [
 			"Rolling Scope School- JavaScript(2021)",
 			'Psychologist(2018)-Bachelor\'s degree']
-		const technologies = ['MongoDB', 'Express', 'Git', 'RESTApi', 'Webpack']
+		const technologies = [ 'Git', 'RESTApi', 'Webpack','MongoDB', 'Express']
 		const skillsAr = ['JS/TS','React', 'HTML', 'CSS', 'Vue','NodeJS']
 		const hobbiesData=`Люблю почитать интересные книги, рисование, походы и природу.
 			При случае могу поиграть в футбол и покер.`

@@ -3,6 +3,7 @@ import {ProjectsSection, TextSection} from "./Section";
 import styles from './style.css'
 import {projectData} from "./app";
 const sitesGitHubLinks={
+	'weatherWidget':'https://github.com/poli-vorobeva/weatherVue',
 	'buttleShip':'https://github.com/tonyaber/battleship/commits/polina2',
 	'artQuiz': 'https://github.com/poli-vorobeva/artQuizREF.git',
 	'bujo':'https://github.com/poli-vorobeva/bujo',
@@ -26,6 +27,7 @@ const sitesGitHubLinks={
 	'redAlert':'https://github.com/poli-vorobeva/redAlertFirst.git'
 }
 export const sites = {
+	'weatherWidget':"Weather Widget",
 	'buttleShip':'Battle Ship',
 	'redAlert': 'Red Alert',
 	'artQuiz': 'Art Quiz',

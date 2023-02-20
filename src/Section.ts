@@ -33,6 +33,7 @@ export class TextSection extends Control {
 export class Section extends Control {
 	constructor(parentNode: HTMLElement, data: datatype) {
 		super(parentNode, 'div', sectionStyles.sectionSt);
+
 		const title = new Control(this.node, 'h3',
 			sectionStyles.sectionTitle, data.title)
 		const skillsUl = new Control(this.node, 'ul', data.styles !== 'education'
@@ -44,7 +45,7 @@ export class Section extends Control {
 		}
 		data.arrayOfData.forEach((sk, ind) => {
 			const listItem = new Control(skillsUl.node, 'li',
-				sectionStyles.sectiinLi, this.drawContent(data, ind, sk)
+			data.styles==='education' ?sectionStyles.educationLi:sectionStyles.sectiinLi, this.drawContent(data, ind, sk)
 			)
 
 		})
@@ -76,43 +77,44 @@ export class ProjectsSection extends Control {
 		super(parentNode, 'div', sectionStyles.sectionSt);
 		this.projects = [
 			{
+				description: 'Пишу на TypeScript', sites: ['artQuiz', "bujo","todoWithServer",
+					'redAlert','fool', 'englishFK', 'christmas', 'match', 'planner']
+			},
+			{description: 'Писала на React', sites: ['buttleShip',"bujo","todoWithServer","question", "zoo", "plannerOld"]},
+			,{
+				description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
+					/*	'vueProject'*/ 'weatherWidget','excelVue', 'vueTodo', 'vuexApp']
+			},
+			{
 				description: `Участвую в комадной разработке игры Red Alert, занималась трассировкой,
 		перемещением юнитов по полю. Также принимала участие в оптимизации, разработке клиет-серверного взаимодействия`,
 				sites: [/*sites.redAlert*/]
 			},
 			{
 				description: `Освоила работу  web socket`,
-				sites: ['redAlert', 'artQuiz', 'fool']
+				sites: ['buttleShip','redAlert', 'artQuiz', 'fool']
 			},
 			{
 				description: `Разобралась с реализацией бота`,
-				sites: ["redAlert", "fool"]
+				sites: ['buttleShip',"redAlert", "fool"]
+			},
+
+			{description: 'Ознакомилась с работой NextJS', sites: ['netflx', 'nextApp']},
+			//todo to add netflsx proj vue landings- zoo museum
+			{
+				description: 'Работала с Canvas', sites: ['redAlert', 'christmas']
+				//webGL,christmas,redAlert,momentum
 			},
 			{
 				description: 'Работала с базой данных mongoDB',
 				sites: ["englishFK", "question"]
-			},
-			{description: 'Писала на React', sites: ['buttleShip',"bujo","todoWithServer","question", "zoo", "plannerOld"]},
-			{
-				description: 'Освоила основы TypeScript', sites: ['artQuiz', "bujo","todoWithServer",
-					'redAlert','fool', 'englishFK', 'christmas', 'match', 'planner']
-			},
-			{description: 'Ознакомилась с работой NextJS', sites: ['netflx', 'nextApp']},
-			//todo to add netflsx proj vue landings- zoo museum
-			{
-				description: 'Разобралась с основами Vue3, Composition Api, Vuex', sites: [
-				/*	'vueProject'*/ 'excelVue', 'vueTodo', 'vuexApp']
-			},
-			{
-				description: 'Работала с Canvas', sites: ['redAlert', 'christmas']
-				//webGL,christmas,redAlert,momentum
 			},
 			{
 				description: 'Работала с audioApi, запись, сохранение, воспроизведение аудио заметок',
 				sites: ['momentum']
 			},
 			{
-				description: 'Научилась контактировать с Nodejs',
+				description: 'Научилась взаимодействовать с Nodejs',
 				sites: []
 			},
 			{

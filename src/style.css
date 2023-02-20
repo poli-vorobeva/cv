@@ -41,15 +41,15 @@ svg {
     max-width: 800px;
     height: 100%;
     padding: 20px;
+    min-width: 500px;
 }
 
 .smallSection {
     width: 30%;
     height: 100%;
-    /* background-color: orange;*/
     display: flex;
+    min-width: 260px;
     flex-flow: column;
-
     justify-content: space-evenly;
 }
 
